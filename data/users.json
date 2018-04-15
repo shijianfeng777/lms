@@ -1,0 +1,57 @@
+/* 1 */
+{
+    "_id" : ObjectId("5ad3bca7b4c32d23b1169351"),
+    "salt" : "rJYkBrC+ohA52gxxv2Zphg==",
+    "displayName" : "Admin Local",
+    "provider" : "local",
+    "username" : "local-admin",
+    "created" : ISODate("2018-04-15T20:57:11.041Z"),
+    "roles" : [ 
+        "admin", 
+        "user"
+    ],
+    "profileImageURL" : "/modules/users/client/img/profile/default.png",
+    "password" : "1gYcu/1tpb5ZsDLB90KbSbE9Ujr+bkTq6I1XVyKN4NQBmbCk7K7xPQ8bKIWnyJ/aJQhGJdRMkkOSz+XI1cL9ug==",
+    "email" : "admin@localhost.com",
+    "lastName" : "Local",
+    "firstName" : "Admin",
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5ad3bca7b4c32d23b1169352"),
+    "salt" : "rJYkBrC+ohA52gxxv2Zphg==",
+    "displayName" : "User Local",
+    "provider" : "local",
+    "username" : "local-user",
+    "created" : ISODate("2018-04-15T20:57:11.108Z"),
+    "roles" : [ 
+        "user"
+    ],
+    "profileImageURL" : "/modules/users/client/img/profile/default.png",
+    "password" : "1gYcu/1tpb5ZsDLB90KbSbE9Ujr+bkTq6I1XVyKN4NQBmbCk7K7xPQ8bKIWnyJ/aJQhGJdRMkkOSz+XI1cL9ug==",
+    "email" : "user@localhost.com",
+    "lastName" : "Local",
+    "firstName" : "User",
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5ad3c4280c554026398b2586"),
+    "salt" : "rJYkBrC+ohA52gxxv2Zphg==",
+    "displayName" : "Xiuqing Li",
+    "provider" : "local",
+    "username" : "xili36",
+    "created" : ISODate("2018-04-15T21:29:12.156Z"),
+    "roles" : [ 
+        "user"
+    ],
+    "profileImageURL" : "/modules/users/client/img/profile/default.png",
+    "password" : "1gYcu/1tpb5ZsDLB90KbSbE9Ujr+bkTq6I1XVyKN4NQBmbCk7K7xPQ8bKIWnyJ/aJQhGJdRMkkOSz+XI1cL9ug==",
+    "email" : "li_xiuqing@hotmail.com",
+    "lastName" : "Li",
+    "firstName" : "Xiuqing",
+    "__v" : 0
+}

@@ -1,0 +1,9 @@
+/* 1 */
+{
+  "_id" : ObjectId("5ad3bca7b4c32d23b1169353"),
+  "user" : ObjectId("5ad3bca7b4c32d23b1169351"),
+  "content" : "This is a seeded Article for the development environment",
+  "title" : "First Article",
+  "created" : ISODate("2018-04-15T20:57:11.174Z"),
+  "__v" : 0
+}
