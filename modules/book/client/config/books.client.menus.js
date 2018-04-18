@@ -2,23 +2,23 @@
   'use strict';
 
   angular
-    .module('articles')
+    .module('books')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
     menuService.addMenuItem('topbar', {
-      title: '文章',
-      state: 'articles',
+      title: '图书',
+      state: 'books',
       type: 'dropdown',
       roles: ['*']
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'articles', {
-      title: '文章列表',
-      state: 'articles.list',
+    menuService.addSubMenuItem('topbar', 'books', {
+      title: '图书列表',
+      state: 'books.list',
       roles: ['*']
     });
   }

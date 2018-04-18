@@ -1,17 +1,17 @@
 ﻿(function () {
   'use strict';
 
-  // Configuring the Articles Admin module
+  // Configuring the Books Admin module
   angular
-    .module('articles.admin')
+    .module('books.admin')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(Menus) {
     Menus.addSubMenuItem('topbar', 'admin', {
-      title: '管理文章',
-      state: 'admin.articles.list'
+      title: '管理图书',
+      state: 'admin.books.list'
     });
   }
 }());

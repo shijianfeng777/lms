@@ -207,7 +207,7 @@ exports.reset = function (req, res, next) {
 };
 
 /**
- * Change Password
+ * 修改密码
  */
 exports.changePassword = function (req, res, next) {
   // Init Variables

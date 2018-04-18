@@ -4,11 +4,11 @@
   </div>
   <small>
     <em class="text-muted">
-      Posted on
+      发表时间：
       <span ng-bind="vm.article.created | date:'mediumDate'"></span>
-      by
+      发表人：
       <span ng-if="vm.article.user" ng-bind="vm.article.user.displayName"></span>
-      <span ng-if="!vm.article.user">Deleted User</span>
+      <span ng-if="!vm.article.user">删除用户</span>
     </em>
   </small>
   <p class="lead" ng-bind="vm.article.content"></p>

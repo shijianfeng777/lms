@@ -1,0 +1,15 @@
+<section>
+  <div class="page-header">
+    <h1 ng-bind="vm.book.title"></h1>
+  </div>
+  <small>
+    <em class="text-muted">
+      发表时间：
+      <span ng-bind="vm.book.created | date:'mediumDate'"></span>
+      发表人：
+      <span ng-if="vm.book.user" ng-bind="vm.book.user.displayName"></span>
+      <span ng-if="!vm.book.user">删除用户</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.book.content"></p>
+</section>
