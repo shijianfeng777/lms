@@ -10,14 +10,20 @@
   <div class="list-group">
     <a data-ng-repeat="book in vm.books" data-ui-sref="admin.books.edit({bookId: book._id})" class="list-group-item">
       <small class="list-group-item-text">
-        发表时间：
+        入库时间：
         <span data-ng-bind="book.created | date:'mediumDate'"></span>
-        发表人：
+        入库人：
         <span ng-if="book.user" ng-bind="book.user.displayName"></span>
         <span ng-if="!book.user">删除用户</span>
       </small>
-      <h4 class="list-group-item-heading" data-ng-bind="book.title"></h4>
-      <p class="list-group-item-text" data-ng-bind="book.content"></p>
+      <div>
+      标题：<h4 class="list-group-item-heading" data-ng-bind="book.title"></h4>
+      作者：<h4 class="list-group-item-heading" data-ng-bind="book.author"></h4>
+      书号：<h4 class="list-group-item-heading" data-ng-bind="book.isbn"></h4>
+      出版日期：<h4 class="list-group-item-heading" data-ng-bind="book.publishDate"></h4>
+      类型：<h4 class="list-group-item-heading" data-ng-bind="book.type"></h4>
+      简介：<p class="list-group-item-text" data-ng-bind="book.description"></p>
+      </div>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="vm.books.$resolved && !vm.books.length">

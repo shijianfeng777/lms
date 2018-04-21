@@ -47,7 +47,11 @@ exports.update = function (req, res) {
   var book = req.book;
 
   book.title = req.body.title;
-  book.content = req.body.content;
+  book.author = req.body.author;
+  book.isbn = req.body.isbn;
+  book.publishDate = req.body.publishDate;
+  book.type = req.body.type;
+  book.description = req.body.description;
 
   book.save(function (err) {
     if (err) {

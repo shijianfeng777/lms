@@ -23,7 +23,27 @@ var BookSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  content: {
+  author: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  isbn: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  publishDate: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  type: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  description: {
     type: String,
     default: '',
     trim: true
