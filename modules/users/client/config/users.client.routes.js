@@ -21,6 +21,15 @@
           roles: ['user', 'admin']
         }
       })
+      .state('settings.mybooks', {
+        url: '/mybooks',
+        templateUrl: '/modules/users/client/views/settings/my-books.client.view.html',
+        controller: 'MyBooksProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'My Books'
+        }
+      })
       .state('settings.profile', {
         url: '/profile',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',

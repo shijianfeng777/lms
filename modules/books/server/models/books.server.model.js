@@ -33,6 +33,10 @@ var BookSchema = new Schema({
     default: '',
     trim: true
   },
+  stock: {
+    type: Number,
+    default: 1
+  },
   publishDate: {
     type: String,
     default: '',

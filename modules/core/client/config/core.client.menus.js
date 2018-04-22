@@ -25,6 +25,11 @@
     });
 
     menuService.addSubMenuItem('account', 'settings', {
+      title: 'My Books',
+      state: 'settings.mybooks'
+    });
+
+    menuService.addSubMenuItem('account', 'settings', {
       title: '修改头像',
       state: 'settings.picture'
     });

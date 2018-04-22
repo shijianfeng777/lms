@@ -35,6 +35,14 @@
         </div>
 
         <div class="form-group" show-errors>
+          <label class="control-label" for="stock">图书数量</label>
+          <input name="stock" type="text" ng-model="vm.book.stock" id="stock" class="form-control" placeholder="书号" required autofocus>
+          <div ng-messages="vm.form.bookForm.stock.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">图书数量</p>
+          </div>
+        </div>
+
+        <div class="form-group" show-errors>
           <label class="control-label" for="publishDate">出版日期</label>
           <input name="publishDate" type="text" ng-model="vm.book.publishDate" id="publishDate" class="form-control" placeholder="出版日期" required autofocus>
           <div ng-messages="vm.form.bookForm.publishDate.$error" role="alert">
