@@ -17,12 +17,12 @@
         <span ng-if="!book.user">删除用户</span>
       </small>
       <div>
-      标题：<h4 class="list-group-item-heading" data-ng-bind="book.title"></h4>
-      作者：<h4 class="list-group-item-heading" data-ng-bind="book.author"></h4>
-      书号：<h4 class="list-group-item-heading" data-ng-bind="book.isbn"></h4>
-      出版日期：<h4 class="list-group-item-heading" data-ng-bind="book.publishDate"></h4>
-      类型：<h4 class="list-group-item-heading" data-ng-bind="book.type"></h4>
-      简介：<p class="list-group-item-text" data-ng-bind="book.description"></p>
+       <div>标题：<span data-ng-bind="book.title"></span></div>
+       <div>作者：<span data-ng-bind="book.author"></span></div>
+       <div>书号：<span data-ng-bind="book.isbn"></span></div>
+       <div>出版日期：<span data-ng-bind="book.publishDate"></span></div>
+       <div>类型：<span data-ng-bind="book.type"></span></div>
+       <div>简介：<span class="list-group-item-text" data-ng-bind="book.description"></span></div>
       </div>
     </a>
   </div>
