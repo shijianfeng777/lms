@@ -28,7 +28,7 @@
       title: 'Loan',
       state: 'settings.loan'
     });
-
+    
     menuService.addSubMenuItem('account', 'settings', {
       title: '修改头像',
       state: 'settings.picture'

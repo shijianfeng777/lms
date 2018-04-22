@@ -3,15 +3,7 @@
     <h1>图书</h1>
   </div>
   <div class="list-group">
-    <a ng-repeat="book in vm.books" ui-sref="books.view({ bookId: book._id })" class="list-group-item">
-      <small class="list-group-item-text">
-        入库时间：
-        <span ng-bind="book.created | date:'mediumDate'"></span>
-        入库人：
-        <span ng-if="book.user" ng-bind="book.user.displayName"></span>
-        <span ng-if="!book.user">删除用户</span>
-      </small>
-      <div>
+    <div ng-repeat="book in vm.books" class="list-group-item"> 
         <div>标题：<span data-ng-bind="book.title"></span></div>
         <div>作者：<span data-ng-bind="book.author"></span></div>
         <div>书号：<span data-ng-bind="book.isbn"></span></div>
@@ -19,7 +11,8 @@
         <div>出版日期：<span data-ng-bind="book.publishDate"></span></div>
         <div>类型：<span data-ng-bind="book.type"></span></div>
         <div>简介：<span class="list-group-item-text" data-ng-bind="book.description"></span></div>
-       </div>
-    </a>
+        <button type="submit" class="btn btn-primary">借</button>
+       <a class="btn btn-primary" ui-sref="books.view({ bookId: book._id })" class="list-group-item">Detail</a>
+    </div>
   </div>
 </section>

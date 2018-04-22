@@ -18,6 +18,12 @@
     menuService.addMenuItem('topbar', {
       title: '借书',
       state: 'settings.loan',
+      roles: ['user']
+    });
+
+    menuService.addMenuItem('topbar', {
+      title: '规章',
+      state: 'rule',
       roles: ['*']
     });
 
