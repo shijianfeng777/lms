@@ -15,6 +15,12 @@
       roles: ['*']
     });
 
+    menuService.addMenuItem('topbar', {
+      title: '借书',
+      state: 'settings.loan',
+      roles: ['*']
+    });
+
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'books', {
       title: '图书列表',

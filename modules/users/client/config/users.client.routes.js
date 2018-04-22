@@ -21,13 +21,13 @@
           roles: ['user', 'admin']
         }
       })
-      .state('settings.mybooks', {
-        url: '/mybooks',
-        templateUrl: '/modules/users/client/views/settings/my-books.client.view.html',
-        controller: 'MyBooksProfileController',
+      .state('settings.loan', {
+        url: '/loan',
+        templateUrl: '/modules/users/client/views/settings/loan.client.view.html',
+        controller: 'LoanProfileController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'My Books'
+          pageTitle: 'My loan'
         }
       })
       .state('settings.profile', {

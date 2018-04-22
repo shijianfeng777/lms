@@ -25,8 +25,8 @@
     });
 
     menuService.addSubMenuItem('account', 'settings', {
-      title: 'My Books',
-      state: 'settings.mybooks'
+      title: 'Loan',
+      state: 'settings.loan'
     });
 
     menuService.addSubMenuItem('account', 'settings', {
