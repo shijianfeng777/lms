@@ -37,6 +37,10 @@ var BookSchema = new Schema({
     type: Number,
     default: 1
   },
+  lend: {
+    type: Number,
+    default: 0
+  },
   publishDate: {
     type: String,
     default: '',
