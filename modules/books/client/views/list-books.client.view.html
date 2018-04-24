@@ -12,7 +12,8 @@
         <div>标题：<span data-ng-bind="book.title"></span></div>
         <div>作者：<span data-ng-bind="book.author"></span></div>
         <div>书号：<span data-ng-bind="book.isbn"></span></div>
-        <button ng-click="vm.loanBook(book)" class="btn btn-primary">借书</button>
+        <div>Avalible：<span>{{book.stock - book.lend}}</span></div>
+        <button ng-click="vm.loanBook(book)" ng-disabled="(book.stock - book.lend) <= 0" class="btn btn-primary">借书</button>
        <a class="btn btn-primary" ui-sref="books.view({ bookId: book._id })" class="list-group-item">详细信息</a>
     </div>
   </div>

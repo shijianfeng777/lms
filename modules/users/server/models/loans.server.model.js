@@ -24,6 +24,10 @@ var LoanSchema = new Schema({
   book: {
     type: Schema.ObjectId,
     ref: 'Book'
+  },
+  returned: {
+    type: Boolean,
+    default: false
   }
 });
  
