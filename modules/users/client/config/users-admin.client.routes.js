@@ -16,6 +16,12 @@
         controller: 'UserListController',
         controllerAs: 'vm'
       })
+      .state('loan', {
+        url: '/users',
+        templateUrl: '/modules/users/client/settings/admin/loan.client.view.html',
+        controller: 'UserListController',
+        controllerAs: 'vm'
+      })
       .state('admin.user', {
         url: '/users/:userId',
         templateUrl: '/modules/users/client/views/admin/view-user.client.view.html',
