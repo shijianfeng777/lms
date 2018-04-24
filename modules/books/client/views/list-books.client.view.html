@@ -1,13 +1,18 @@
 <section>
-  <div class="page-header">
-    <h1>图书</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>图书</h1>
+    </div>
+    <div class="col-md-4" style="margin-top: 2em">
+      <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="搜索" ng-change="vm.figureOutItemsToDisplay()" />
+    </div>
   </div>
   <div class="list-group">
     <div ng-repeat="book in vm.books" class="list-group-item"> 
         <div>标题：<span data-ng-bind="book.title"></span></div>
         <div>作者：<span data-ng-bind="book.author"></span></div>
         <div>书号：<span data-ng-bind="book.isbn"></span></div>
-        <button ng-click="vm.loanBook(book)" class="btn btn-primary">借</button>
+        <button ng-click="vm.loanBook(book)" class="btn btn-primary">借书</button>
        <a class="btn btn-primary" ui-sref="books.view({ bookId: book._id })" class="list-group-item">详细信息</a>
     </div>
   </div>
