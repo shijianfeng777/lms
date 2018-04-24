@@ -16,15 +16,9 @@
     });
 
     menuService.addMenuItem('topbar', {
-      title: '借书',
-      state: 'settings.loan',
+      title: '个人主页',
+      state: 'settings.profile',
       roles: ['user']
-    });
-
-    menuService.addMenuItem('topbar', {
-      title: '规章',
-      state: 'rule',
-      roles: ['*']
     });
 
     // Add the dropdown list item
