@@ -14,7 +14,7 @@
     init();
     function init(){
       LoansService.get().$promise.then(function(data){
-        vm.loans = data;
+        vm.loans = data.loans;
       })
     }
   }

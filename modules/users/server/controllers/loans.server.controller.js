@@ -15,7 +15,7 @@ exports.list = function (req, res) {
 
 exports.create = function (req, res) {
   // Init Variables
-  var user = req.body.user;
+  var user = req.user;
   var book = req.body.book;
 
   if (user && book) {
