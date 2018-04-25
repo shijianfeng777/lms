@@ -15,6 +15,12 @@
       roles: ['*']
     });
 
+    menuService.addMenuItem('topbar', {
+      title: '个人主页',
+      state: 'settings.profile',
+      roles: ['user']
+    });
+
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'books', {
       title: '图书列表',

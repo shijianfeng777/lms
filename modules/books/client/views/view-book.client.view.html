@@ -1,6 +1,6 @@
 <section>
   <div class="page-header">
-    <h1 ng-bind="vm.book.title"></h1>
+    <h1 ng-bind="vm.book.title">图书</h1>
   </div>
   <small>
     <em class="text-muted">
@@ -11,5 +11,12 @@
       <span ng-if="!vm.book.user">删除用户</span>
     </em>
   </small>
-  <p class="lead" ng-bind="vm.book.content"></p>
+  <div>
+    <div>标题：<span class="list-group-item-heading" data-ng-bind="vm.book.title"></span></div>
+    <div>作者：<span class="list-group-item-heading" data-ng-bind="vm.book.author"></span></div>
+    <div>书号：<span class="list-group-item-heading" data-ng-bind="vm.book.isbn"></span></div>
+    <div>出版日期：<span class="list-group-item-heading" data-ng-bind="vm.book.publishDate"></span></div>
+    <div>类型：<span class="list-group-item-heading" data-ng-bind="vm.book.type"></span></div>
+    <div>简介：<p class="list-group-item-text" data-ng-bind="vm.book.description"></p></div>
+    </div>
 </section>

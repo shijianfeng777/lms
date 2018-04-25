@@ -21,6 +21,24 @@
           roles: ['user', 'admin']
         }
       })
+      .state('settings.loan', {
+        url: '/loan',
+        templateUrl: '/modules/users/client/views/settings/loan.client.view.html',
+        controller: 'LoanProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'My loan'
+        }
+      })
+      .state('settings.rule', {
+        url: '/rule',
+        templateUrl: '/modules/users/client/views/settings/rule.client.view.html',
+        controller: 'RuleProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'rule'
+        }
+      })
       .state('settings.profile', {
         url: '/profile',
         templateUrl: '/modules/users/client/views/settings/edit-profile.client.view.html',

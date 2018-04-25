@@ -23,7 +23,10 @@
       title: '修改信息',
       state: 'settings.profile'
     });
-
+    menuService.addSubMenuItem('account', 'settings', {
+      title: '我的图书',
+      state: 'settings.loan'
+    });
     menuService.addSubMenuItem('account', 'settings', {
       title: '修改头像',
       state: 'settings.picture'
@@ -32,6 +35,10 @@
     menuService.addSubMenuItem('account', 'settings', {
       title: '修改密码',
       state: 'settings.password'
+    });
+    menuService.addSubMenuItem('account', 'settings', {
+      title: '规章',
+      state: 'settings.rule'
     });
   }
 }());

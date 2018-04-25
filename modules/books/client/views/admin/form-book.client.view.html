@@ -1,6 +1,6 @@
 <section>
   <div class="page-header">
-    <h1>{{vm.book._id ? 'Edit Book' : '新图书'}}</h1>
+    <h1>{{vm.book._id ? '修改图书信息' : '新图书'}}</h1>
   </div>
   <div class="pull-right">
     <a ng-show="vm.book._id" class="btn btn-primary" ng-click="vm.remove()">
@@ -11,10 +11,10 @@
     <form name="vm.form.bookForm" class="form-horizontal" ng-submit="vm.save(vm.form.bookForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="title">标题</label>
-          <input name="title" type="text" ng-model="vm.book.title" id="title" class="form-control" placeholder="标题" required autofocus>
+          <label class="control-label" for="title">书名</label>
+          <input name="title" type="text" ng-model="vm.book.title" id="title" class="form-control" placeholder=书名 required autofocus>
           <div ng-messages="vm.form.bookForm.title.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">请填写图书标题</p>
+            <p class="help-block error-text" ng-message="required">请填写图书名字</p>
           </div>
         </div>
 
@@ -34,6 +34,20 @@
           </div>
         </div>
 
+        <div class="form-group" show-errors>
+          <label class="control-label" for="total">图书数量</label>
+          <input name="total" type="text" ng-model="vm.book.total" id="total" class="form-control" placeholder="图书数量" required autofocus>
+          <div ng-messages="vm.form.bookForm.total.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">图书数量</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+            <label class="control-label" for="stock">可借出数量</label>
+            <input name="stock" type="text" ng-model="vm.book.stock" id="stock" class="form-control" placeholder="可借出数量" required autofocus>
+            <div ng-messages="vm.form.bookForm.stock.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">可借出图书数量</p>
+            </div>
+        </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="publishDate">出版日期</label>
           <input name="publishDate" type="text" ng-model="vm.book.publishDate" id="publishDate" class="form-control" placeholder="出版日期" required autofocus>
@@ -55,7 +69,7 @@
           <textarea name="description" data-ng-model="vm.book.description" id="description" class="form-control" cols="30" rows="5" placeholder="简介"></textarea>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.book._id ? 'Update' : '创建'}}</button>
+          <button type="submit" class="btn btn-default">{{vm.book._id ? '更新' : '创建'}}</button>
         </div>
       </fieldset>
     </form>

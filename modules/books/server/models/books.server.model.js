@@ -23,7 +23,35 @@ var BookSchema = new Schema({
     trim: true,
     required: 'Title cannot be blank'
   },
-  content: {
+  author: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  isbn: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  stock: {
+    type: Number,
+    default: 1
+  },
+  lend: {
+    type: Number,
+    default: 0
+  },
+  publishDate: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  type: {
+    type: String,
+    default: '',
+    trim: true
+  },
+  description: {
     type: String,
     default: '',
     trim: true
@@ -42,6 +70,21 @@ mongoose.model('Book', BookSchema);
 * Seeds the User collection with document (Book)
 * and provided options.
 */
+var LoanSchema =new Schema({
+  created:{
+    type:Date,
+    default:Date.now
+  },
+  user:{
+    type:Schema.ObjectId,
+    ref:'User'
+  },
+  book:{
+    type:Schema.ObjectId,
+    ref:'Book'
+  }
+});
+
 function seed(doc, options) {
   var Book = mongoose.model('Book');
 

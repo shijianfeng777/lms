@@ -1,6 +1,6 @@
 <section>
   <div class="page-header">
-    <h1>设置</h1>
+    <h1>个人主页</h1>
   </div>
   <div class="row">
     <nav class="col-sm-3 col-md-3">
@@ -9,10 +9,19 @@
           <a ui-sref="settings.profile">修改信息</a>
         </li>
         <li ui-sref-active="active">
+          <a ui-sref="settings.loan">我的图书</a>
+        </li>
+        <li ui-sref-active="active">
           <a ui-sref="settings.picture">修改头像</a>
         </li>
         <li ui-sref-active="active" ng-show="vm.user.provider === 'local'">
           <a ui-sref="settings.password">修改密码</a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="settings.rule">规章</a>
+        </li>
+        <li>
+          <a href="/api/auth/signout" target="_self">登出</a>
         </li>
       </ul>
     </nav>
