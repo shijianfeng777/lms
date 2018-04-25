@@ -14,34 +14,26 @@ exports.list = function (req, res) {
 };
 
 exports.create = function (req, res) {
-  // Init Variables
+
+  // need to check if the user allowed to borrow more books
+  // and if the book is avaible for borrowing.
   var user = req.user;
   var book = req.body.book;
 
-  if (user && book) {
+  if (user && book) {  
     var loan = new Loan();
     loan.user = user;
     loan.book = book;
-
-    loan.save(function (err) {
-      if (err) {
-        return res.status(422).send({
-          message: err.message
-        });
-      } else {
-        req.login(user, function (err) {
-          if (err) {
-            res.status(400).send(err);
-          } else {
-            res.json(user);
-          }
-        });
+    loan.returned = false;
+    loan.created = new Date();
+    loan.save(function(err){
+      if(!err){
+       return res.json({ok: true})
       }
-    });
-  } else {
-    res.status(401).send({
-      message: 'User or books doesn\t exist' 
-    });
+      res.status(500).json({
+       error: 'failed'
+      });
+    }); 
   }
 };
 
