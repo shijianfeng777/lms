@@ -7,16 +7,9 @@ var _ = require('lodash'),
   mongoose = require('mongoose'),
   Loan = mongoose.model('Loan');
 
-exports.list = function (req, res, next, id) {
-  Loan.find({}).exec(function (err, loans) {
-    if (err) {
-      return next(err);
-    } else if (!loans) {
-      return next(new Error('Failed to load loans ' + id));
-    }
-
-    req.loans = loans;
-    next();
+exports.list = function (req, res) {
+  Loan.find({user: req.user}).populate('book').then(function(loans){
+    res.json({loans: loans});
   });
 };
 
@@ -33,7 +26,7 @@ exports.create = function (req, res) {
     loan.save(function (err) {
       if (err) {
         return res.status(422).send({
-          message: errorHandler.getErrorMessage(err)
+          message: err.message
         });
       } else {
         req.login(user, function (err) {

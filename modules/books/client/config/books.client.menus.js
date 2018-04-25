@@ -17,7 +17,7 @@
 
     menuService.addMenuItem('topbar', {
       title: '个人主页',
-      state: 'settings.profile',
+      state: 'settings.loan',
       roles: ['user']
     });
 
