@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('loans.services')
+    .module('users.services')
     .factory('LoansService', LoansService);
 
   LoansService.$inject = ['$resource', '$log'];
