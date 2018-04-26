@@ -10,12 +10,11 @@
   function LoanProfileController($scope, $http, $location, UsersService, LoansService, Authentication, Notification) {
     var vm = this;
  
-    console.log(Authentication.user);
+    var loginUser = Authentication.user;
     init();
     function init(){
-      LoansService.get().then(function(data){
-        debugger;
-        vm.loans = data;
+      LoansService.get().$promise.then(function(data){
+        vm.loans = data.loans;
       })
     }
   }

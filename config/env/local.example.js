@@ -15,7 +15,7 @@
 // local-production.js
 //
 
-/* For example (Development):
+/*For example (Development):
 
 module.exports = {
   db: {
