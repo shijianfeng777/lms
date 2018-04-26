@@ -14,7 +14,7 @@
     vm.loanBook = loanBook;
 
     function loanBook(book){
-      $state.go('Loan');
+      $state.go('users.services');
       
     }
   }
