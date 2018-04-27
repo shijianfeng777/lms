@@ -8,12 +8,3 @@ module.exports = function (app) {
   app.route('/api/loans/:id').delete(loans.delete);
   app.route('/api/loans').post(loans.create);
 };
-function routeConfig($stateProvider) {
-  $stateProvider
-    .state('loans.book', {
-      url: '/loans',
-      templateUrl: './modules/users/server/routes/loans.server.routes.js',
-      controller: 'LoanProfileController',
-      controllerAs: 'vm'
-    })
-  }

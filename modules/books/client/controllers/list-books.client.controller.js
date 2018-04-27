@@ -14,7 +14,9 @@
     vm.loanBook = loanBook;
 
     function loanBook(book){
-      $state.go('loans.book');
+      LoansService.get().$promise.then(function(data){
+        vm.loans = data.loans;
+      loanBook = book;})
       
     }
   }
