@@ -8,14 +8,16 @@
   LoansService.$inject = ['$resource', '$log'];
 
   function LoansService($resource, $log) {
-    //$resource has default http method $save 
-    var Loan = $resource('/api/loans/:loanId', {
+    // $resource has default http method $save
+    var baseUrl = '/api/loans';
+    var Loan = $resource(baseUrl + '/:loanId', {
       loanId: '@_id'
     }, {
       update: {
         method: 'PUT'
       },
       create: {
+        url: baseUrl,
         method: 'POST'
       },
       get: {

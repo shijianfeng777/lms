@@ -11,6 +11,6 @@
     var vm = this;
 
     vm.user = Authentication.user;
-     
+
   }
 }());

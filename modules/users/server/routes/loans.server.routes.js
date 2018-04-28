@@ -7,4 +7,4 @@ module.exports = function (app) {
   app.route('/api/loans/:id').put(loans.update);
   app.route('/api/loans/:id').delete(loans.delete);
   app.route('/api/loans').post(loans.create);
-};
+}

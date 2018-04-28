@@ -4,11 +4,12 @@
       <h1>图书</h1>
     </div>
     <div class="col-md-4" style="margin-top: 2em">
-      <input class="form-control col-md-4" type="text" ng-model="vm.search" placeholder="搜索" ng-change="vm.figureOutItemsToDisplay()" />
+      <!-- https://docs.angularjs.org/api/ng/filter/filter -->
+      <input class="form-control col-md-4" type="text" ng-model="vm.searchText" placeholder="搜索"  />
     </div>
   </div>
   <div class="list-group">
-    <div ng-repeat="book in vm.books" class="list-group-item"> 
+    <div ng-repeat="book in vm.books | filter: vm.searchText" class="list-group-item"> 
         <div>标题：<span data-ng-bind="book.title"></span></div>
         <div>作者：<span data-ng-bind="book.author"></span></div>
         <div>书号：<span data-ng-bind="book.isbn"></span></div>

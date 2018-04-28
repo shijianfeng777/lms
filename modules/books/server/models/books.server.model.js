@@ -70,18 +70,18 @@ mongoose.model('Book', BookSchema);
 * Seeds the User collection with document (Book)
 * and provided options.
 */
-var LoanSchema =new Schema({
-  created:{
-    type:Date,
-    default:Date.now
+var LoanSchema = new Schema({
+  created: {
+    type: Date,
+    default: Date.now
   },
-  user:{
-    type:Schema.ObjectId,
-    ref:'User'
+  user: {
+    type: Schema.ObjectId,
+    ref: 'User'
   },
-  book:{
-    type:Schema.ObjectId,
-    ref:'Book'
+  book: {
+    type: Schema.ObjectId,
+    ref: 'Book'
   }
 });
 

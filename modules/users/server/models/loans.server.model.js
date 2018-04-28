@@ -30,6 +30,24 @@ var LoanSchema = new Schema({
     default: false
   }
 });
- 
+var repaySchema = new Schema({
+  created: {
+    type: Date,
+    default: Date.now
+  },
+  user: {
+    type: Schema.ObjectId,
+    ref: 'User'
+  },
+  book: {
+    type: Schema.ObjectId,
+    ref: 'Book'
+  },
+  returned: {
+    type: Boolean,
+    default: true
+  }
+});
+
 mongoose.model('Loan', LoanSchema);
 
