@@ -5,18 +5,22 @@
     .module('books')
     .controller('BooksListController', BooksListController);
 
-  BooksListController.$inject = ['BooksService', 'LoansService'];
+  BooksListController.$inject = ['BooksService', 'LoansService', '$state'];
 
-  function BooksListController(BooksService, LoansService) {
+  function BooksListController(BooksService, LoansService, $state) {
     var vm = this;
 
     vm.books = BooksService.query();
     vm.loanBook = loanBook;
 
     function loanBook(book) {
-      console.log(LoansService.prototype);
-      LoansService.create(book).$promise.then(function (data) {
-        console.log(data);
+       
+      LoansService.create({book: book}).$promise.then(function (data) {
+         if(data && data.ok){
+           $state.go('settings.loan');
+         } else{
+           console.log('Errrorrrr');
+         }
       });
     }
   }

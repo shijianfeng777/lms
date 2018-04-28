@@ -1,11 +1,11 @@
-<section class="row">
-  <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-4">
-    <div ng-repeat="loan in vm.loans" class="row col-lg-10"> 
-      <div>标题：<span data-ng-bind="loan.book.title"></span></div>
-      <div>作者：<span data-ng-bind="loan.book.author"></span></div>
-      <div>书号：<span data-ng-bind="loan.book.isbn"></span></div>
-      <div>状态: <span>{{loan.return? '还了' : '没还'}}</span></div>
-      <div>应还日期: <span>{{loan.created | date:'yyyy-MM-dd' }}</span></div>
-  </div>
+<section>
+  <div class="row col-lg-9">
+    <div ng-repeat="loan in vm.loans" class="margin-bottom-10"> 
+        <div>标题：<span data-ng-bind="loan.book.title"></span></div>
+        <div>作者：<span data-ng-bind="loan.book.author"></span></div>
+        <div>书号：<span data-ng-bind="loan.book.isbn"></span></div>
+        <div>状态: <span>{{loan.return? '还了' : '没还'}}</span></div>
+        <div>应还日期: <span>{{loan.created | date:'yyyy-MM-dd' }}</span></div>
+    </div>
   </div>
 </section>

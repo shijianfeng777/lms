@@ -14,15 +14,10 @@ exports.list = function (req, res) {
 };
 
 exports.create = function (req, res) {
-
-  res.json({ ok: req.body });
-
-  /*
   // need to check if the user allowed to borrow more books
   // and if the book is avaible for borrowing.
   var user = req.user;
   var book = req.body.book;
-
   if (user && book) {
     var loan = new Loan();
     loan.user = user;
@@ -37,7 +32,7 @@ exports.create = function (req, res) {
        error: 'failed'
       });
     });
-  }*/
+  }
 };
 
 exports.update = function (req, res) {
