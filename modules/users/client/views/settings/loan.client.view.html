@@ -5,7 +5,10 @@
         <div>作者：<span data-ng-bind="loan.book.author"></span></div>
         <div>书号：<span data-ng-bind="loan.book.isbn"></span></div>
         <div>状态: <span>{{loan.return? '还了' : '没还'}}</span></div>
+<<<<<<< HEAD
         <button ng-click="vm.repayBook(loan)" class="btn btn-primary">还书</button>
+=======
+>>>>>>> fa8ed7627f8de1a2044ca463007359744afd0268
         <div>应还日期: <span>{{loan.created | date:'yyyy-MM-dd' }}</span></div>
     </div>
   </div>

@@ -30,6 +30,7 @@ var LoanSchema = new Schema({
     default: false
   }
 });
+<<<<<<< HEAD
 var repaySchema = new Schema({
   created: {
     type: Date,
@@ -48,6 +49,8 @@ var repaySchema = new Schema({
     default: true
   }
 });
+=======
+>>>>>>> fa8ed7627f8de1a2044ca463007359744afd0268
 
 mongoose.model('Loan', LoanSchema);
 
