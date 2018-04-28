@@ -30,6 +30,6 @@ var LoanSchema = new Schema({
     default: false
   }
 });
- 
+
 mongoose.model('Loan', LoanSchema);
 

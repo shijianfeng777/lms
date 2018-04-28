@@ -15,5 +15,5 @@ function routeConfig($stateProvider) {
       templateUrl: './modules/users/server/routes/loans.server.routes.js',
       controller: 'LoanProfileController',
       controllerAs: 'vm'
-    })
-  }
+    });
+}
