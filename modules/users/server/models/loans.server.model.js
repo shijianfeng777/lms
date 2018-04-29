@@ -13,10 +13,6 @@ var mongoose = require('mongoose'),
  * Loan Schema
  */
 var LoanSchema = new Schema({
-  created: {
-    type: Date,
-    default: Date.now
-  },
   user: {
     type: Schema.ObjectId,
     ref: 'User'
@@ -28,29 +24,18 @@ var LoanSchema = new Schema({
   returned: {
     type: Boolean,
     default: false
-  }
-});
-<<<<<<< HEAD
-var repaySchema = new Schema({
-  created: {
+  },
+  createdDate: {
     type: Date,
     default: Date.now
   },
-  user: {
-    type: Schema.ObjectId,
-    ref: 'User'
+  dueDate: {
+    type: Date
   },
-  book: {
-    type: Schema.ObjectId,
-    ref: 'Book'
+  returnedDate: {
+    type: Date
   },
-  returned: {
-    type: Boolean,
-    default: true
-  }
 });
-=======
->>>>>>> fa8ed7627f8de1a2044ca463007359744afd0268
 
 mongoose.model('Loan', LoanSchema);
 

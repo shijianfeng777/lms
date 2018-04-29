@@ -46,7 +46,7 @@ gulp.task('env:prod', function () {
 gulp.task('nodemon', function () {
 
   // Node.js v7 and newer use different debug argument
-  var debugArgument = semver.satisfies(process.versions.node, '>=7.0.0') ? '--inspect' : '--debug';
+  var debugArgument = semver.satisfies(process.versions.node, '>=7.0.0') ? '--inspect=0.0.0.0:9229' : '--debug';
 
   return plugins.nodemon({
     script: 'server.js',

@@ -1,15 +1,27 @@
 <section>
   <div class="row col-lg-9">
-    <div ng-repeat="loan in vm.loans" class="margin-bottom-10"> 
+    <h2>借的书</h2>
+    <div ng-repeat="loan in vm.loans | filter: {returned: false }" class="margin-bottom-10"> 
         <div>标题：<span data-ng-bind="loan.book.title"></span></div>
         <div>作者：<span data-ng-bind="loan.book.author"></span></div>
         <div>书号：<span data-ng-bind="loan.book.isbn"></span></div>
-        <div>状态: <span>{{loan.return? '还了' : '没还'}}</span></div>
-<<<<<<< HEAD
-        <button ng-click="vm.repayBook(loan)" class="btn btn-primary">还书</button>
-=======
->>>>>>> fa8ed7627f8de1a2044ca463007359744afd0268
-        <div>应还日期: <span>{{loan.created | date:'yyyy-MM-dd' }}</span></div>
+        <div>状态: <span>{{loan.returned? '还了' : '没还'}}</span></div>
+        <div>借书日期: <span>{{loan.createdDate | date:'yyyy-MM-dd' }}</span></div>
+        <div>日期之前还: <span>{{loan.dueDate | date:'yyyy-MM-dd' }}</span></div>
+        <button ng-click="vm.returnBook(loan)" ng-if="!loan.returned" class="btn btn-primary">还书</button>
     </div>
+    </div>
+
+    <div class="row col-lg-9">
+    <h2>已还书</h2>
+    <div ng-repeat="loan in vm.loans | filter: {returned: true }" class="margin-bottom-10"> 
+      <div>标题：<span data-ng-bind="loan.book.title"></span></div>
+      <div>作者：<span data-ng-bind="loan.book.author"></span></div>
+      <div>书号：<span data-ng-bind="loan.book.isbn"></span></div>
+      <div>状态: <span>{{loan.returned? '还了' : '没还'}}</span></div>
+      <div>借书日期: <span>{{loan.createdDate | date:'yyyy-MM-dd' }}</span></div>
+      <div>还书当天日期: <span>{{loan.returnedDate | date:'yyyy-MM-dd' }}</span></div>
+    </div>
+  </div>
   </div>
 </section>

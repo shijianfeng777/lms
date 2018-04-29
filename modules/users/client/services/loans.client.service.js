@@ -13,7 +13,7 @@
     var Loan = $resource(baseUrl + '/:loanId', {
       loanId: '@_id'
     }, {
-      update: {
+      returnBook: {
         method: 'PUT'
       },
       create: {
